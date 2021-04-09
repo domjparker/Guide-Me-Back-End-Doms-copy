@@ -20,14 +20,14 @@
   },
   "homepage": "https://github.com/domjparker/GuideMe-BE#readme",
   "dependencies": {
-    "bcrypt": "^5.0.0",
+    "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
-    "memorystore": "^1.6.2",
-    "mongoose": "^5.9.28",
+    "memorystore": "^1.6.6",
+    "mongoose": "^5.12.3",
     "morgan": "^1.10.0",
-    "nodemailer": "^6.4.11",
-    "socket.io": "^2.4.0"
+    "nodemailer": "^6.5.0",
+    "socket.io": "^4.0.1"
   }
 }
