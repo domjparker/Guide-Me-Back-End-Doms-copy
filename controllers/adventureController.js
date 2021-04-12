@@ -1,5 +1,5 @@
 const db = require("../models")
-var mongoose = require('mongoose')
+// var mongoose = require('mongoose')
 
 module.exports = {
     findAll: function (req, res) {
