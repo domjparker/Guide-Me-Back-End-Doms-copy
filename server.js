@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(cors({
-  origin: ["https://guideme-fe-doms-copy.herokuapp.com"],
+  origin: ["http://localhost:3000", "https://guideme-fe-doms-copy.herokuapp.com"],
   credentials: true
 }));
 
