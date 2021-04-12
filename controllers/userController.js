@@ -2,7 +2,7 @@ const db = require("../models")
 const bcrypt = require("bcrypt");
 const { User } = require("../models");
 const nodemailer = require('nodemailer')
-// const creds = require('../config');
+const { USER, PASS } = require('../config');
 
 module.exports = {
     // get request to get user info by _id
@@ -35,8 +35,8 @@ module.exports = {
                 var transporter = nodemailer.createTransport({
                     service: 'gmail',
                     auth: {
-                        user: process.env.USER,
-                        pass: process.env.PASS
+                        user: USER,
+                        pass: PASS
 
                     }
                 });
@@ -71,9 +71,8 @@ module.exports = {
             var transporter = nodemailer.createTransport({
                 service: 'gmail',
                 auth: {
-                    user: process.env.USER,
-                    pass: process.env.PASS
-
+                    user: USER,
+                    pass: PASS
                 }
             });
             var mailOptions = {
