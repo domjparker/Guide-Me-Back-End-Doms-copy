@@ -41,7 +41,8 @@ app.use(session({
 // Connects with MongoDB via Mongoose
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/guideme", {
   useNewUrlParser: true,
-  useFindAndModify: false
+  useFindAndModify: false,
+  useUnifiedTypology: true
 });
 
 // routes
