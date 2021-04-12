@@ -19,7 +19,7 @@ router.route("/profile/")
     .get(userController.findBySessionId)
     .put(userController.update)
     .delete(userController.remove);
-// matches with "/api/usernod/profile"
+// matches with "/api/user/profile"
 router.route("/profile/:id")
     .get(userController.findUserById)
 
