@@ -6,7 +6,7 @@ const session = require("express-session")
 const logger = require("morgan");
 const mongoose = require("mongoose");
 const routes = require("./routes");
-const { SESSIONSECRET } = require('./config');
+const creds = require('./config');
 // const { MemoryStore } = require("express-session");
 
 // Express App Setup
@@ -26,11 +26,13 @@ app.use(cors({
 
 // Session Setup
 app.use(session({
-  secret: SESSIONSECRET,
+  secret: creds.SESSIONSECRET,
   resave: false,
   saveUninitialized: true,
   cookie: {
-    maxAge: 7200000
+    maxAge: 7200000,
+    sameSite: "none",
+    secure:true,
   }
   // store: new MemoryStore({ checkPeriod: 7200000 })
 }))
